@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\rendervault",
+    "\\rendervault\\public",
+    "\\rendervault\\public\\images",
+    "\\rendervault\\src",
+    "\\rendervault\\src\\app",
+    "\\rendervault\\src\\app\\components",
+    "\\rendervault\\src\\app\\components\\cart",
+    "\\rendervault\\src\\app\\pages",
+    "\\rendervault\\src\\app\\services"
+  ],
+  "SelectedNode": "\\rendervault\\src\\index.html",
+  "PreviewInSolutionExplorer": false
+}
