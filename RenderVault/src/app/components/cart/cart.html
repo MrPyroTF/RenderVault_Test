@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<main class="cart-container">
+  <div class="cart-header">
+    <h1>Tu Carrito de Compras</h1>
+    <span class="item-count">{{ totalItems }} artículos</span>
+  </div>
+
+  <!-- Si el carrito tiene elementos -->
+  <div *ngIf="cartItems.length > 0; else emptyCart" class="cart-content">
+    <div class="cart-items-list">
+      <div class="cart-item-card" *ngFor="let item of cartItems">
+        <div class="item-info">
+          <h3>{{ item.title }}</h3>
+          <p class="item-format">Formato: <strong>{{ item.fileType }}</strong></p>
+          <p class="item-price">${{ item.price.toFixed(2) }}</p>
+        </div>
+        <div class="item-actions">
+          <button class="btn-remove" (click)="removeItem(item.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resumen de compra -->
+    <div class="cart-summary">
+      <h2>Resumen del Pedido</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>${{ subtotal.toFixed(2) }}</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>${{ subtotal.toFixed(2) }}</span>
+      </div>
+      <button class="btn-checkout" (click)="checkout()">Proceder al Pago</button>
+    </div>
+  </div>
+
+  <!-- Si el carrito está vacío -->
+  <ng-template #emptyCart>
+    <div class="empty-cart-message">
+      <p>Tu carrito está vacío.</p>
+      <a routerLink="/" class="btn-primary">Explorar Modelos 3D</a>
+    </div>
+  </ng-template>
+</main>
+
+<app-footer></app-footer>

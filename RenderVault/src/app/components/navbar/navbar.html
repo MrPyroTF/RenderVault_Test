@@ -1,0 +1,43 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="brand">
+      <a routerLink="/" class="logo">
+        <img src="images/RenderVaultLogo.png" alt="RenderVault Logo" class="brand-logo" />
+      </a>
+    </div>
+
+    <!-- Enlaces NavBar -->
+    <nav class="nav-links">
+      <a routerLink="/productos">Productos</a>
+      <a routerLink="/comisiones">Comisiones</a>
+      <a routerLink="/about-us">Sobre Nosotros</a>
+      <a routerLink="/soporte">Soporte</a>
+    </nav>
+
+    <!-- Botones y Carrito -->
+    <div class="nav-actions">
+      <a routerLink="/carrito" class="cart-icon" aria-label="Carrito de Compras">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+      </a>
+      <a routerLink="/login" class="btn-secondary">Iniciar Sesión</a>
+      <a routerLink="/register" class="btn-primary">Registrarse</a>
+
+      <button class="hamburger" (click)="toggleMenu()">☰</button>
+    </div>
+  </div>
+
+  <!-- Menú responsivo para móviles -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <a routerLink="/productos" (click)="toggleMenu()">Productos</a>
+    <a routerLink="/comisiones" (click)="toggleMenu()">Comisiones</a>
+    <a routerLink="/about-us" (click)="toggleMenu()">Sobre Nosotros</a>
+    <a routerLink="/soporte" (click)="toggleMenu()">Soporte</a>
+    <a routerLink="/login" (click)="toggleMenu()">Iniciar Sesión</a>
+    <a routerLink="/register" (click)="toggleMenu()">Registrarse</a>
+  </div>
+</header>

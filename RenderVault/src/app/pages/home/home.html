@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<main class="home-container">
+  <!-- Banner principal -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">RenderVault</h1>
+    </div>
+  </section>
+
+  <!-- Sección de Modelos Destacados -->
+  <section class="models-section">
+    <div class="section-header">
+    </div>
+
+    <!-- Grid de productos -->
+    <div class="products-grid">
+      <app-product-card *ngFor="let item of featuredProducts"
+                        [product]="item"
+                        (onAddToCart)="addToCart(item)">
+      </app-product-card>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

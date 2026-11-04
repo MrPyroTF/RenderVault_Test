@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<div class="auth-container">
+  <div class="auth-grid">
+    <!-- Lado Izquierdo: Branding / Propuesta de valor con Modelo 3D -->
+    <div class="auth-left">
+      <h2>Descubre y comercia mallas 3D certificadas</h2>
+      <p>Un entorno seguro y preciso diseñado explícitamente para desarrolladores de videojuegos, diseñadores industriales y artistas visuales.</p>
+      <div class="preview-box">
+        <model-viewer src="models/GutterManBoneless.glb"
+                      alt="GutterMan Model"
+                      auto-rotate
+                      camera-controls
+                      disable-zoom
+                      class="model-preview">
+        </model-viewer>
+        <div class="preview-footer">
+          <span>Visitas: 12,452</span>
+          <span>Polígonos: 24,964</span>
+          <span class="badge-blue">RENDER_OK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado Derecho: Formulario de Registro -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <h3>Crea tu cuenta</h3>
+        <p class="subtitle">Únete a nuestro mercado distribuido de recursos 3D</p>
+
+        <form (ngSubmit)="onRegister()">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre Completo</label>
+              <input type="text" [(ngModel)]="fullName" name="fullName" placeholder="Marcus Vane" required />
+            </div>
+            <div class="form-group">
+              <label>Nombre de Usuario</label>
+              <input type="text" [(ngModel)]="username" name="username" placeholder="marcus_vane3d" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Número Celular</label>
+              <input type="text" [(ngModel)]="phone" name="phone" placeholder="+52 (55) 3921-8472" required />
+            </div>
+            <div class="form-group">
+              <label>Correo Electrónico</label>
+              <input type="email" [(ngModel)]="email" name="email" placeholder="marcus&#64;polygondev.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••" required />
+          </div>
+
+          <div class="form-group">
+            <label>Tipo de Usuario</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" value="buyer" [(ngModel)]="userType" name="userType" /> Comprador
+              </label>
+              <label class="radio-label">
+                <input type="radio" value="seller" [(ngModel)]="userType" name="userType" /> Vendedor
+              </label>
+            </div>
+          </div>
+
+          <!-- Aparece únicamente si el tipo de usuario seleccionado es 'seller' -->
+          <div class="toggle-group" *ngIf="userType === 'seller'">
+            <span>Realizar comisiones <br><small>Indica si aceptas encargos personalizados de modelos 3D</small></span>
+            <input type="checkbox" [(ngModel)]="acceptCommissions" name="acceptCommissions" class="toggle-input" id="toggle" />
+            <label for="toggle" class="toggle-switch"></label>
+          </div>
+
+          <button type="submit" class="btn-primary">Crear Cuenta en RenderVault</button>
+        </form>
+
+        <div class="auth-footer-text">
+          ¿Ya tienes una cuenta? <a routerLink="/login">Iniciar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

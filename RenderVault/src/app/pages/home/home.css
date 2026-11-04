@@ -1,0 +1,87 @@
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0b0f15;
+  background-image: linear-gradient(to bottom, rgba(11, 15, 21, 0.85), rgba(11, 15, 21, 0.98)), url('/images/3DModel_Background.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-bottom: 4rem;
+}
+
+/* Hero Section con gradiente inferior para fundirse y difuminarse suavemente hacia el body */
+.hero-section {
+  background-color: #161f2c;
+  background-image: linear-gradient(to bottom, rgba(25, 35, 50, 0.75), rgba(11, 15, 21, 0.95)), url('/images/Header_Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.5rem 1.5rem 3rem 1.5rem;
+  text-align: center;
+  border-bottom: none;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 40px rgba(56, 189, 248, 0.2);
+  letter-spacing: 0.05em;
+}
+
+/* Grid Section */
+.models-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: transparent;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.badge-tag {
+  background: #1f242d;
+  color: #f1f5f9;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid #30363d;
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
+/* Configuración Grid Responsive */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

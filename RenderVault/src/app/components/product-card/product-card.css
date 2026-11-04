@@ -1,0 +1,101 @@
+.card {
+  background: #171b22;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+  }
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(to bottom, rgba(13, 17, 23, 0.2), rgba(13, 17, 23, 0.4)), url('/images/3DModel_Background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #2d3748;
+  position: relative;
+}
+
+.placeholder-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+  color: #94a3b8;
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+  background-color: #171b22;
+}
+
+.product-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.seller-name {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.add-btn {
+  background: #21262d;
+  color: #f1f5f9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+  .add-btn:hover {
+    background: #38bdf8;
+    color: #0d1117;
+    border-color: #38bdf8;
+  }
+
+/* Configuración del visor 3D en la tarjeta */
+.card-model-viewer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+}

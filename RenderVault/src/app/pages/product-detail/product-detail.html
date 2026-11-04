@@ -1,0 +1,90 @@
+<app-product-navbar></app-product-navbar>
+
+<main class="detail-container" *ngIf="product">
+  <section class="product-main-grid">
+
+    <!-- Modelo 3d interactivo dinámico -->
+    <div class="viewport-3d-wrapper">
+      <model-viewer [src]="product.modelSrc"
+                    [alt]="product.alt"
+                    auto-rotate
+                    camera-controls
+                    ar
+                    shadow-intensity="1"
+                    class="model-viewer-element">
+      </model-viewer>
+    </div>
+
+    <div class="product-info-panel">
+      <h1 class="product-title">{{ product.title }}</h1>
+      <span class="product-badge">{{ product.badge }}</span>
+
+      <div class="product-price">
+        ${{ product.price }} <span class="currency-code">MXN</span>
+      </div>
+
+      <div class="file-type-selector">
+        <label for="fileType">Tipo de archivo</label>
+        <select id="fileType" class="select-input" (change)="onFileChange($event)">
+          <option value="fbx">FBX (.fbx)</option>
+          <option value="obj">OBJ (.obj)</option>
+          <option value="glb">glTF / GLB (.glb)</option>
+        </select>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn-buy-now">Comprar</button>
+        <button class="btn-add-cart" (click)="addToCart()">Añadir al carrito</button>
+      </div>
+
+      <div class="description-accordion">
+        <details open>
+          <summary>Descripción</summary>
+          <p>{{ product.description }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parte de reseñas -->
+  <section class="reviews-section">
+    <h2>Latest reviews</h2>
+
+    <!-- Formulario para dejar reseña -->
+    <div class="review-form-card">
+      <h3>Escribe tu reseña</h3>
+      <div class="star-rating-input">
+        <span *ngFor="let star of [1, 2, 3, 4, 5]"
+              class="star"
+              [class.active]="star <= (hoverRating || selectedRating)"
+              (mouseenter)="setHoverRating(star)"
+              (mouseleave)="clearHoverRating()"
+              (click)="setRating(star)">
+          ★
+        </span>
+      </div>
+      <textarea [value]="newComment" (input)="newComment = $any($event.target).value" placeholder="Cuéntanos qué te pareció este modelo 3D..." class="review-textarea" rows="3"></textarea>      <button class="btn-submit-review" (click)="submitReview()">Enviar reseña</button>
+    </div>
+
+    <!-- Lista de reseñas o mensaje vacío -->
+    <div *ngIf="reviews.length > 0; else emptyReviewsList" class="reviews-list">
+      <div class="review-card" *ngFor="let rev of reviews">
+        <div class="review-header">
+          <div class="review-stars">
+            <span *ngFor="let s of [1, 2, 3, 4, 5]" [class.filled]="s <= rev.rating">★</span>
+          </div>
+          <span class="review-date">{{ rev.date }}</span>
+        </div>
+        <p class="review-comment" *ngIf="rev.comment">{{ rev.comment }}</p>
+      </div>
+    </div>
+
+    <ng-template #emptyReviewsList>
+      <div class="empty-reviews">
+        <p>Aún no hay reseñas para este producto. ¡Sé el primero en calificarlo!</p>
+      </div>
+    </ng-template>
+  </section>
+</main>
+
+<app-footer></app-footer>

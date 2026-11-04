@@ -1,0 +1,32 @@
+<div class="card" [routerLink]="['/product', product.id]" style="cursor: pointer;">
+  <div class="image-wrapper">
+    <model-viewer *ngIf="product.modelSrc; else normalImage"
+                  #modelViewer
+                  [src]="product.modelSrc"
+                  camera-orbit="45deg 55deg 105%"
+                  field-of-view="30deg"
+                  interaction-prompt="none"
+                  class="card-model-viewer"
+                  (mouseenter)="modelViewer.setAttribute('auto-rotate', '')"
+                  (mouseleave)="modelViewer.removeAttribute('auto-rotate')">
+    </model-viewer>
+
+    <!-- Si hay modelo 3D, muestra un placeholder -->
+    <ng-template #normalImage>
+      <img *ngIf="product.imageUrl; else placeholder" [src]="product.imageUrl" [alt]="product.title" style="width: 100%; height: 100%; object-fit: cover;">
+      <ng-template #placeholder>
+        <span class="placeholder-icon"></span>
+      </ng-template>
+    </ng-template>
+  </div>
+
+  <div class="card-content">
+    <h3 class="product-title">{{ product.title }}</h3>
+    <p class="seller-name">Por: {{ product.seller }}</p>
+
+    <div class="card-footer">
+      <span class="price">${{ product.price | number:'1.2-2' }}</span>
+      <button class="add-btn" (click)="addToCart($event)">+</button>
+    </div>
+  </div>
+</div>

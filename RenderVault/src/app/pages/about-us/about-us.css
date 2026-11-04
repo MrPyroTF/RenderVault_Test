@@ -1,0 +1,269 @@
+/* Aplicación del fondo global con textura geométrica para todo el body */
+::ng-deep body {
+  background-color: #0b0f15;
+  background-image: linear-gradient(to bottom, rgba(11, 15, 21, 0.75), rgba(11, 15, 21, 0.95)), url('/images/3DModel_Background.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  color: #f1f5f9;
+}
+
+.about-container {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Encabezado Principal (Hero) más claro con Header_Background.jpg y degradado suave */
+.about-hero {
+  background-color: #161f2c;
+  background-image: linear-gradient(to bottom, rgba(25, 35, 50, 0.75), rgba(11, 15, 21, 0.95)), url('/images/Header_Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+  text-align: center;
+  border-bottom: none;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge-tag {
+  display: inline-block;
+  background: #1f242d;
+  color: #f1f5f9;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid #30363d;
+}
+
+.about-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 1.5rem 0 1rem 0;
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  letter-spacing: 0.02em;
+}
+
+.about-intro {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Sección de Presentación */
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1.25rem;
+}
+
+.about-text p:not(.section-subtitle) {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Misión y Visión (Tarjetas oscuras sólidas) */
+.mission-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.mission-card {
+  background: #161f2c;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+  .mission-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .mission-card h2 {
+    color: #f1f5f9;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .mission-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+/* Características (Qué ofrecemos) */
+.features-section {
+  background: transparent;
+  padding: 4rem 1.5rem;
+}
+
+.section-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #161f2c;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.12);
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+/* Llamada a la Acción (CTA) */
+.about-cta {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+  .about-cta h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+  }
+
+  .about-cta p {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: #94a3b8;
+    line-height: 1.7;
+  }
+
+.back-home-btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #0b0f15;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+  .back-home-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+/* Adaptación para móviles y tablets */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .features-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta h2 {
+    font-size: 1.6rem;
+  }
+}

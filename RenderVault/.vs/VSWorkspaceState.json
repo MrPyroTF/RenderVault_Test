@@ -1,16 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\rendervault",
-    "\\rendervault\\public",
-    "\\rendervault\\public\\images",
-    "\\rendervault\\src",
-    "\\rendervault\\src\\app",
-    "\\rendervault\\src\\app\\components",
-    "\\rendervault\\src\\app\\components\\cart",
-    "\\rendervault\\src\\app\\pages",
-    "\\rendervault\\src\\app\\services"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\navbar",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\about-us"
   ],
-  "SelectedNode": "\\rendervault\\src\\index.html",
+  "SelectedNode": "\\src\\app\\pages\\about-us\\about-us.css",
   "PreviewInSolutionExplorer": false
 }

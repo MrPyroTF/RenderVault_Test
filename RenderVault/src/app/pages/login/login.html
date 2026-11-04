@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="auth-container">
+  <div class="auth-grid">
+    <!-- Lado Izquierdo: Branding / Propuesta de valor con Modelo 3D -->
+    <div class="auth-left">
+      <h2>Descubre y comercia mallas 3D certificadas</h2>
+      <p>Un entorno seguro y preciso diseñado explícitamente para desarrolladores de videojuegos, diseñadores industriales y artistas visuales.</p>
+      <div class="preview-box">
+        <model-viewer src="models/GutterManBoneless.glb"
+                      alt="GutterMan Model"
+                      auto-rotate
+                      camera-controls
+                      disable-zoom
+                      class="model-preview">
+        </model-viewer>
+        <div class="preview-footer">
+          <span>Visitas: 12,452</span>
+          <span>Polígonos: 24,964</span>
+          <span class="badge-blue">RENDER_OK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado Derecho: Formulario de Inicio de Sesión -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <h3>Bienvenido de nuevo</h3>
+        <p class="subtitle">Accede a tu repositorio 3D y a tus publicaciones activas</p>
+
+        <!-- Mensaje de error dinámico -->
+        <div class="error-alert" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="onLogin()">
+          <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input type="email" [(ngModel)]="email" name="email" placeholder="artista&#64;rendervault.io" required />
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label>Contraseña</label>
+              <a routerLink="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
+            </div>
+            <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••" required />
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" [(ngModel)]="rememberMe" name="rememberMe" />
+            <label for="remember">Recordarme</label>
+          </div>
+
+          <button type="submit" class="btn-primary">Iniciar Sesión</button>
+        </form>
+
+        <div class="auth-footer-text">
+          ¿Aún no tienes una cuenta? <a routerLink="/register">Crea una cuenta ahora »</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
