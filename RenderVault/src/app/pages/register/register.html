@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="auth-container">
   <div class="auth-grid">
-    <!-- Lado Izquierdo: Branding / Propuesta de valor con Modelo 3D -->
+    <!-- Modelo 3D Promocional -->
     <div class="auth-left">
       <h2>Descubre y comercia mallas 3D certificadas</h2>
       <p>Un entorno seguro y preciso diseñado explícitamente para desarrolladores de videojuegos, diseñadores industriales y artistas visuales.</p>
@@ -16,12 +16,10 @@
         <div class="preview-footer">
           <span>Visitas: 12,452</span>
           <span>Polígonos: 24,964</span>
-          <span class="badge-blue">RENDER_OK</span>
         </div>
       </div>
     </div>
 
-    <!-- Lado Derecho: Formulario de Registro -->
     <div class="auth-right">
       <div class="auth-card">
         <h3>Crea tu cuenta</h3>
@@ -67,7 +65,6 @@
             </div>
           </div>
 
-          <!-- Aparece únicamente si el tipo de usuario seleccionado es 'seller' -->
           <div class="toggle-group" *ngIf="userType === 'seller'">
             <span>Realizar comisiones <br><small>Indica si aceptas encargos personalizados de modelos 3D</small></span>
             <input type="checkbox" [(ngModel)]="acceptCommissions" name="acceptCommissions" class="toggle-input" id="toggle" />

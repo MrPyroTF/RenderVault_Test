@@ -23,10 +23,10 @@
 
     <div class="footer-center">
       <div class="legal-links">
-        <a routerLink="/terminos">Términos y Condiciones</a>
-        <a routerLink="/privacidad">Política de Privacidad</a>
-        <a routerLink="/devoluciones">Política de Devoluciones</a>
-        <a routerLink="/licencias">Licencias de Uso 3D</a>
+        <button class="btn-legal-link" (click)="openModal('terminos')">Términos y Condiciones</button>
+        <button class="btn-legal-link" (click)="openModal('privacidad')">Política de Privacidad</button>
+        <button class="btn-legal-link" (click)="openModal('devoluciones')">Política de Devoluciones</button>
+        <button class="btn-legal-link" (click)="openModal('licencias')">Licencias de Uso 3D</button>
       </div>
     </div>
 
@@ -45,3 +45,219 @@
     <p>&copy; 2026 RenderVault. Todos los derechos reservados.</p>
   </div>
 </footer>
+
+<!-- Modal de los terminos y condiciones -->
+<div class="modal-overlay" *ngIf="activeModal === 'terminos'" (click)="closeModal()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Términos y Condiciones de Uso</h3>
+      <button class="btn-close" (click)="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h4>Naturaleza del Servicio y Responsable Legal</h4>
+      <p>
+        RenderVault opera como una plataforma digital de intermediación que facilita la comercialización de
+        licencias de uso de modelos 3D y la gestión de comisiones creativas entre modeladores
+        ("Vendedores") y usuarios ("Compradores"). El responsable legal de la operación de RenderVault se
+        identifica formalmente en los avisos de la plataforma conforme a la legislación mexicana aplicable.
+        RenderVault no es propietario ni autor de los modelos publicados en el catálogo general.
+      </p>
+
+      <h4>Esquemas de Compra y Custodia de Comisiones (Escrow)</h4>
+      <ul>
+        <li>
+          <strong>Modelos de Catálogo General:</strong> Se adquieren mediante un pago único que concede una
+          licencia digital de uso comercial o personal según corresponda.
+        </li>
+        <li>
+          <strong>Comisiones Personalizadas:</strong> Proyectos a medida con un arancel por intermediación del 18%
+          para RenderVault. Los pagos pueden ser en una exhibición o parcialidades. Los fondos son
+          gestionados bajo un esquema operativo de custodia y retención para asegurar el cumplimiento,
+          estableciéndose reglas claras de resolución en caso de cancelación por falta de respuesta,
+          incumplimiento parcial o total de entrega.
+        </li>
+      </ul>
+
+      <h4>Modificaciones y Notificación de Cambios Legales</h4>
+      <p>
+        RenderVault se reserva el derecho de modificar estos Términos y Condiciones y su marco legal.
+        Cualquier actualización sustancial será notificada formalmente a los usuarios registrados mediante
+        correo electrónico y avisos destacados en la plataforma, constituyendo el uso continuado la
+        aceptación de los nuevos términos.
+      </p>
+
+      <h4>Estructura Optimizada de Comisiones para Vendedores</h4>
+      <ul>
+        <li>
+          <strong>Vendedor Nuevo (15%):</strong> Nivel inicial para cuentas de reciente creación hasta
+          cumplir los estándares de transición.
+        </li>
+        <li>
+          <strong>Vendedor Frecuente (12%):</strong> Aplicable a quienes publiquen al menos 2 modelos
+          3D al mes y alcancen un volumen conjunto mínimo de 10 ventas mensuales entre todas sus
+          publicaciones.
+        </li>
+        <li>
+          <strong>Vendedor Destacado (10%):</strong> Para creadores de alto rendimiento que mantengan
+          al menos 1 publicación mensual y cumplan con estrictos estándares de calidad y actividad
+          validados por la plataforma.
+        </li>
+        <li>
+          <strong>Venta Promocionada (18%):</strong> Aplica a publicaciones
+          destacadas por más de 24 horas continuas en la página principal.
+        </li>
+      </ul>
+
+      <h4>Prohibición de Multicuentas y Sanciones Progresivas</h4>
+      <p>Se prohíbe la creación de múltiples cuentas para reventa interna. Se aplicará un sistema de sanciones progresivas que incluye investigación, suspensión temporal, resolución formal y suspensión definitiva con retención contractual de fondos ante fraude verificado.</p>
+
+      <h4>Gestión de Riesgo en Comisiones</h4>
+      <p>
+        En caso de detectarse abandono de proyecto o fraude comprobado por parte de un Vendedor en
+        comisiones, se aplicará la suspensión de privilegios de comisiones, exclusión de algoritmos de
+        recomendación y el reembolso íntegro del 100% al Co
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-accept" (click)="closeModal()">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de las politicas de privacidad -->
+<div class="modal-overlay" *ngIf="activeModal === 'privacidad'" (click)="closeModal()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Política de Privacidad y Protección de Datos</h3>
+      <button class="btn-close" (click)="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h4>Identidad y Domicilio del Responsable</h4>
+      <p>
+        RenderVault, operando en la República Mexicana, es el responsable del tratamiento y protección de
+        sus datos personales, comprometiéndose a cumplir con la Ley Federal de Protección de Datos
+        Personales en Posesión de los Particulares (LFPDPPP).
+      </p>
+
+      <h4>Finalidades del Tratamiento de Datos</h4>
+      <ul>
+        <li>
+          <strong>Finalidades Primarias:</strong> Creación y gestión de cuentas de usuario, autenticación,
+          procesamiento de pagos mediante pasarelas cifradas (PCI-DSS), emisión de tickets de compra
+          y atención de soporte técnico y telefónico.
+        </li>
+        <li>
+          <strong>Finalidades Secundarias:</strong> Envío de notificaciones obligatorias sobre actualizaciones legales,
+          avisos operativos y comunicaciones de servicio.
+        </li>
+      </ul>
+
+      <h4>Ejercicio de Derechos ARCO</h4>
+      <p>
+        Los usuarios podrán en todo momento ejercer sus derechos de Acceso, Rectificación, Cancelación
+        y Oposición (ARCO), así como revocar su consentimiento para el tratamiento de sus datos,
+        enviando una solicitud formal a través de los canales oficiales de soporte de RenderVault.
+      </p>
+
+      <h4>Transferencias, Cookies e Incidentes de Seguridad</h4>
+      <p>
+        RenderVault implementa medidas de seguridad técnicas (cifrado TLS/SSL y AES-256) y
+        procedimientos formales para la atención de incidentes de seguridad. El sitio web utiliza cookies y
+        tecnologías de seguimiento para optimizar la experiencia de navegación. Los datos personales no
+        se transfieren a terceros ajenos a la operación sin el consentimiento del titular, salvo excepciones
+        legales.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-accept" (click)="closeModal()">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de las politicas de devoluciones -->
+<div class="modal-overlay" *ngIf="activeModal === 'devoluciones'" (click)="closeModal()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Política de Devoluciones y Reembolsos</h3>
+      <button class="btn-close" (click)="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h4>Condiciones Generales y Ventana de Reembolso</h4>
+      <p>Las compras digitales son finales tras la descarga. Se otorga una ventana estándar de 2 horas tras la compra para solicitar la devolución siempre que el archivo no haya sido descargado.</p>
+
+      <h4>Excepciones por Defectos y Derechos del Consumidor</h4>
+      <p>Fuera de la regla general, aplicará un reembolso total si se comprueba cualquiera de los siguientes casos:</p>
+      <ul>
+        <li>
+          <strong>Archivos Corruptos o Infuncionales:</strong> Cuando el archivo 3D presente daños técnicos
+          irreparables que impidan su apertura o uso básico.
+        </li>
+        <li>
+          <strong>Discrepancia Publicitaria:</strong> Cuando el modelo recibido no corresponda de manera sustancial con
+          las imágenes, especificaciones o descripción anunciada por el vendedor.
+        </li>
+        <li>
+          <strong>Infracción de Terceros:</strong> Cuando se detecte que el contenido
+          comercializado infringe derechos de propiedad intelectual de terceros o carecía de
+          autorizaciones legales.
+        </li>
+      </ul>
+
+      <h4>Reembolsos en Comisiones Personalizadas</h4>
+      <p>
+        En el servicio de Comisiones Personalizadas, si se comprueba incumplimiento o fraude por parte
+        del diseñador, el Comprador recibirá un reembolso del 100% de los fondos retenidos en custodia.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-accept" (click)="closeModal()">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de las Licencias de uso de los modelos 3D -->
+<div class="modal-overlay" *ngIf="activeModal === 'licencias'" (click)="closeModal()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Acuerdo de Licencias de Uso y Propiedad Intelectual</h3>
+      <button class="btn-close" (click)="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h4>Licencia de Uso Comercial Estándar</h4>
+      <p>
+        La adquisición de modelos en el catálogo general otorga una licencia de uso no exclusiva para
+        incorporación en proyectos comerciales o personales, prohibiendo estrictamente la redistribución de
+        los archivos fuente crudos (.obj, .fbx, .blend, .stl).
+      </p>
+
+      <h4>Política Estricta para Modelos 'Fanmade' (Derivados)</h4>
+      <ul>
+        <li>
+          <strong>Copyright Original:</strong> El copyright pertenece exclusiva y únicamente a la
+          compañía titular de la franquicia original.
+        </li>
+        <li>
+          <strong>Derechos del Modelador:</strong> El Vendedor solo posee derechos sobre la autoría de la
+          interpretación tridimensional (malla esculpida), mas no sobre la propiedad intelectual del
+          personaje.
+        </li>
+        <li>
+          <strong>Prohibición de Monetización:</strong> Ninguna de las partes (ni comprador ni vendedor)
+          podrá monetizar comercialmente el modelo Fanmade, salvo que constituya una obra
+          transformativa con modificaciones tan profundas y sustanciales que represente un producto
+          creativo totalmente nuevo e independiente.
+        </li>
+      </ul>
+
+      <h4>Cesión de Copyright en Comisiones Originales</h4>
+      <p>
+        En los encargos de comisiones de conceptos 100% originales, al liquidarse el 100% del pago y la
+        comisión de la plataforma, el Vendedor cede de manera formal e irrevocable los derechos
+        patrimoniales y copyright del diseño al Comprador.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-accept" (click)="closeModal()">Entendido</button>
+    </div>
+  </div>
+</div>

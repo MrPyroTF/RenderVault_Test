@@ -6,7 +6,6 @@
       </a>
     </div>
 
-    <!-- Enlaces NavBar -->
     <nav class="nav-links">
       <a routerLink="/productos">Productos</a>
       <a routerLink="/comisiones">Comisiones</a>
@@ -14,7 +13,7 @@
       <a routerLink="/soporte">Soporte</a>
     </nav>
 
-    <!-- Botones y Carrito -->
+    <!-- Botones, Carrito y Menú de Usuario -->
     <div class="nav-actions">
       <a routerLink="/carrito" class="cart-icon" aria-label="Carrito de Compras">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -24,8 +23,42 @@
         </svg>
         <span class="badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
       </a>
-      <a routerLink="/login" class="btn-secondary">Iniciar Sesión</a>
-      <a routerLink="/register" class="btn-primary">Registrarse</a>
+
+      <!-- Si no hay sesion -->
+      <ng-container *ngIf="!currentUser">
+        <a routerLink="/login" class="btn-secondary">Iniciar Sesión</a>
+        <a routerLink="/register" class="btn-primary">Registrarse</a>
+      </ng-container>
+
+      <!-- Si hay sesion activa -->
+      <div class="user-menu-container" *ngIf="currentUser">
+        <div class="user-avatar-circle" (click)="toggleDropdown()">
+          {{ currentUser.username ? currentUser.username.charAt(0).toUpperCase() : 'U' }}
+        </div>
+
+        <div class="dropdown-menu" [class.open]="isDropdownOpen">
+          <div class="dropdown-header">
+            <span class="user-name">{{ currentUser.fullName || currentUser.username }}</span>
+            <span class="user-role-badge">
+              {{ currentUser.userType === 'seller' ? 'Vendedor' : 'Comprador' }}
+            </span>
+          </div>
+
+          <hr class="dropdown-divider" />
+
+          <a routerLink="/perfil" class="dropdown-item" (click)="toggleDropdown()">Mi Perfil y Seguridad</a>
+          <a routerLink="/mis-compras" class="dropdown-item" (click)="toggleDropdown()">Mis Compras</a>
+
+          <ng-container *ngIf="currentUser.userType === 'seller'">
+            <a routerLink="/mis-productos" class="dropdown-item" (click)="toggleDropdown()">Mis Modelos Publicados</a>
+            <a routerLink="/comisiones-recibidas" class="dropdown-item" (click)="toggleDropdown()">Gestionar Comisiones</a>
+          </ng-container>
+
+          <hr class="dropdown-divider" />
+
+          <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+        </div>
+      </div>
 
       <button class="hamburger" (click)="toggleMenu()">☰</button>
     </div>
@@ -37,7 +70,17 @@
     <a routerLink="/comisiones" (click)="toggleMenu()">Comisiones</a>
     <a routerLink="/about-us" (click)="toggleMenu()">Sobre Nosotros</a>
     <a routerLink="/soporte" (click)="toggleMenu()">Soporte</a>
-    <a routerLink="/login" (click)="toggleMenu()">Iniciar Sesión</a>
-    <a routerLink="/register" (click)="toggleMenu()">Registrarse</a>
+
+    <ng-container *ngIf="!currentUser">
+      <a routerLink="/login" (click)="toggleMenu()">Iniciar Sesión</a>
+      <a routerLink="/register" (click)="toggleMenu()">Registrarse</a>
+    </ng-container>
+
+    <ng-container *ngIf="currentUser">
+      <a routerLink="/perfil" (click)="toggleMenu()">Mi Perfil y Seguridad</a>
+      <a routerLink="/mis-compras" (click)="toggleMenu()">Mis Compras</a>
+      <a *ngIf="currentUser.userType === 'seller'" routerLink="/mis-productos" (click)="toggleMenu()">Mis Modelos Publicados</a>
+      <a (click)="logout(); toggleMenu()">Cerrar Sesión</a>
+    </ng-container>
   </div>
 </header>

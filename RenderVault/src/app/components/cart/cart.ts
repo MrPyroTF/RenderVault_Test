@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar';
 import { FooterComponent } from '../../components/footer/footer';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 interface CartItem {
   id: string;
@@ -18,11 +18,33 @@ interface CartItem {
   selector: 'app-cart',
   standalone: true,
   imports: [CommonModule, RouterModule, NavbarComponent, FooterComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './cart.html',
   styleUrls: ['./cart.css']
 })
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
+
+  // Control del modal de compra completada
+  showSuccessModal = false;
+  completedOrderId = '';
+  completedOrderEmail = '';
+  isProcessingCheckout = false;
+
+  private readonly localModelsMap: { [key: string]: string } = {
+    '1': 'models/ShockWaveFOCBoneless.glb',
+    '2': 'models/GutterManBoneless.glb',
+    '3': 'models/DoomSShotgun.glb',
+    '4': 'models/ChomperBoneless.glb',
+    '5': 'models/Cassetera.glb',
+    '6': 'models/ArbolCartoon.glb',
+    '7': 'models/DoomToy.glb',
+    '8': 'models/LanciaStratos.glb',
+    '9': 'models/Laptop Predator.glb',
+    '10': 'models/GameBoy.glb'
+  };
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.loadCart();
@@ -41,10 +63,23 @@ export class CartComponent implements OnInit {
 
   saveCart() {
     localStorage.setItem('rendervault_cart', JSON.stringify(this.cartItems));
+    window.dispatchEvent(new Event('cart-updated'));
+  }
+
+  getModelUrl(item: CartItem): string {
+    return this.localModelsMap[item.productId] || 'models/ArbolCartoon.glb';
   }
 
   get subtotal(): number {
     return this.cartItems.reduce((acc, item) => acc + item.price, 0);
+  }
+
+  get iva(): number {
+    return this.subtotal * 0.16;
+  }
+
+  get total(): number {
+    return this.subtotal + this.iva;
   }
 
   get totalItems(): number {
@@ -56,20 +91,46 @@ export class CartComponent implements OnInit {
     this.saveCart();
   }
 
+  closeSuccessModal() {
+    this.showSuccessModal = false;
+  }
+
+  goToMyPurchases() {
+    this.showSuccessModal = false;
+    this.router.navigate(['/mis-compras']);
+  }
+
   async checkout() {
-    if (this.cartItems.length === 0) {
-      alert('Tu carrito está vacío.');
+    if (this.cartItems.length === 0 || this.isProcessingCheckout) {
       return;
     }
 
-    const userEmail = prompt('Ingresa el correo electrónico para pruebas:', 'tucorreo@ejemplo.com');
+    const sessionRaw = localStorage.getItem('rendervault_session');
+    let sessionUser: any = null;
+    if (sessionRaw) {
+      try {
+        sessionUser = JSON.parse(sessionRaw);
+      } catch (e) {
+        sessionUser = null;
+      }
+    }
+
+    const userEmail = sessionUser?.email?.trim();
 
     if (!userEmail || !userEmail.includes('@')) {
-      alert('Debes ingresar un correo electrónico válido para continuar.');
+      alert('Debes iniciar sesión con una cuenta válida para completar la compra.');
+      this.router.navigate(['/login']);
       return;
     }
 
+    this.isProcessingCheckout = true;
+
     const orderId = 'RV-' + Math.floor(100000 + Math.random() * 900000);
+    const purchaseDate = new Date().toLocaleDateString('es-MX', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
 
     const summaryParams = {
       email: userEmail,
@@ -80,7 +141,9 @@ export class CartComponent implements OnInit {
         price: item.price.toFixed(2)
       })),
       cost: {
-        total: this.subtotal.toFixed(2)
+        subtotal: this.subtotal.toFixed(2),
+        iva: this.iva.toFixed(2),
+        total: this.total.toFixed(2)
       }
     };
 
@@ -137,54 +200,59 @@ export class CartComponent implements OnInit {
       }
     };
 
-    const downloadParams = {
-      email: userEmail,
-      order_id: orderId,
-      orders: this.cartItems.map(item => {
-        const product = productDatabase[item.productId];
-        let fileLink = 'ENLACE_NO_DISPONIBLE';
+    const purchasedItemsToSave = this.cartItems.map(item => {
+      const product = productDatabase[item.productId];
+      let fileLink = '';
 
-        if (product) {
-          const format = item.fileType.toLowerCase();
-          if (format === 'fbx') fileLink = product.fbx;
-          if (format === 'glb') fileLink = product.glb;
-          if (format === 'obj') fileLink = product.obj;
-        }
+      if (product) {
+        const format = item.fileType.toLowerCase();
+        if (format === 'fbx') fileLink = product.fbx;
+        if (format === 'glb') fileLink = product.glb;
+        if (format === 'obj') fileLink = product.obj;
+      }
 
-        return {
-          name: `${item.title} (${item.fileType})`,
-          drive_link: fileLink
-        };
-      })
-    };
+      return {
+        purchaseId: `${orderId}-${item.id}`,
+        orderId: orderId,
+        productId: item.productId,
+        title: item.title,
+        price: item.price,
+        fileType: item.fileType,
+        purchaseDate: purchaseDate,
+        category: 'general',
+        downloadUrl: fileLink,
+        modelSrc: this.getModelUrl(item)
+      };
+    });
 
     const SERVICE_ID = 'service_xj4fn7q';
     const PUBLIC_KEY = 'lxcAsElzwVw3ve67E';
     const TEMPLATE_SUMMARY_ID = 'template_vjf6evd';
-    const TEMPLATE_DOWNLOAD_ID = 'template_k88w4pa';
 
     try {
-      //Envio correo de resumen
-      console.log('Enviando resumen de compra...');
       await emailjs.send(SERVICE_ID, TEMPLATE_SUMMARY_ID, summaryParams, PUBLIC_KEY);
-      console.log('Resumen de compra enviado con éxito.');
 
-      // Pausa de seguridad de 1.2 segundos para evitar bloqueo por saturación de EmailJS
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      const accountIdentifier = userEmail.toLowerCase();
+      const userKey = `rendervault_purchases_${accountIdentifier}`;
 
-      //Envio de correo de enlaces de descarga
-      console.log('Enviando enlaces de descarga...');
-      await emailjs.send(SERVICE_ID, TEMPLATE_DOWNLOAD_ID, downloadParams, PUBLIC_KEY);
-      console.log('Enlaces de descarga enviados con éxito.');
+      const existingPurchasesRaw = localStorage.getItem(userKey);
+      const existingPurchases = existingPurchasesRaw ? JSON.parse(existingPurchasesRaw) : [];
+      localStorage.setItem(
+        userKey,
+        JSON.stringify([...purchasedItemsToSave, ...existingPurchases])
+      );
 
-      alert(`¡Proceso de pago simulado con éxito! Se han enviado dos correos a: ${userEmail}`);
-
+      this.completedOrderId = orderId;
+      this.completedOrderEmail = userEmail;
       this.cartItems = [];
       this.saveCart();
+      this.showSuccessModal = true;
 
     } catch (err) {
-      console.error('Error al enviar los correos:', err);
-      alert('Hubo un problema al enviar los correos de confirmación. Revisa la consola para más detalles.');
+      console.error('Error al procesar el correo de compra:', err);
+      alert('Hubo un problema al enviar el recibo de compra.');
+    } finally {
+      this.isProcessingCheckout = false;
     }
   }
 }

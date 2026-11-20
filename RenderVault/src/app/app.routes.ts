@@ -5,6 +5,8 @@ import { ProductDetail } from './pages/product-detail/product-detail';
 import { CartComponent } from './components/cart/cart';
 import { LoginComponent } from './pages/login/login';
 import { RegisterComponent } from './pages/register/register';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password';
+import { MyPurchasesComponent } from './components/my-purchases/my-purchases';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -13,5 +15,7 @@ export const routes: Routes = [
   { path: 'carrito', component: CartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'mis-compras', component: MyPurchasesComponent },
   { path: '**', redirectTo: '' }
 ];

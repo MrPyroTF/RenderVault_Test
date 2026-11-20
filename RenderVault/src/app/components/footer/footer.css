@@ -71,19 +71,32 @@
   gap: 0.5rem;
 }
 
-  .legal-links a,
-  .nav-links a {
-    text-decoration: none;
-    color: #94a3b8;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
+/* Botones con apariencia de enlace para la sección legal */
+.btn-legal-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+  .btn-legal-link:hover,
+  .nav-links a:hover {
+    color: #38bdf8;
   }
 
-    .legal-links a:hover,
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
 .footer-bottom {
   max-width: 1200px;
@@ -95,7 +108,130 @@
   color: #64748b;
 }
 
-/* Responsivo para móviles */
+/* Diseño para los modales del ambito legal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: #161f2c;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .modal-header h3 {
+    margin: 0;
+    color: #38bdf8;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+  .btn-close:hover {
+    color: #f1f5f9;
+  }
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+  .modal-body h4 {
+    color: #f1f5f9;
+    font-size: 0.95rem;
+    margin: 1.2rem 0 0.4rem 0;
+  }
+
+    .modal-body h4:first-child {
+      margin-top: 0;
+    }
+
+  .modal-body p {
+    margin: 0 0 0.8rem 0;
+  }
+
+  .modal-body ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .modal-body li {
+    margin-bottom: 0.4rem;
+  }
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-accept {
+  background: #38bdf8;
+  color: #0b0f15;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+  .btn-accept:hover {
+    opacity: 0.9;
+  }
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -104,5 +240,9 @@
 
   .footer-left {
     align-items: flex-start;
+  }
+
+  .modal-card {
+    max-height: 90vh;
   }
 }

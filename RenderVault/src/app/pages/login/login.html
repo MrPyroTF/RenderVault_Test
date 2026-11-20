@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="auth-container">
   <div class="auth-grid">
-    <!-- Lado Izquierdo: Branding / Propuesta de valor con Modelo 3D -->
+    <!-- Modelo 3D Promocional -->
     <div class="auth-left">
       <h2>Descubre y comercia mallas 3D certificadas</h2>
       <p>Un entorno seguro y preciso diseñado explícitamente para desarrolladores de videojuegos, diseñadores industriales y artistas visuales.</p>
@@ -16,19 +16,18 @@
         <div class="preview-footer">
           <span>Visitas: 12,452</span>
           <span>Polígonos: 24,964</span>
-          <span class="badge-blue">RENDER_OK</span>
         </div>
       </div>
     </div>
 
-    <!-- Lado Derecho: Formulario de Inicio de Sesión -->
     <div class="auth-right">
       <div class="auth-card">
         <h3>Bienvenido de nuevo</h3>
-        <p class="subtitle">Accede a tu repositorio 3D y a tus publicaciones activas</p>
+        <p class="subtitle">Accede a tu cuenta de RenderVault</p>
 
-        <!-- Mensaje de error dinámico -->
-        <div class="error-alert" *ngIf="errorMessage">
+        <div *ngIf="errorMessage"
+             class="error-alert"
+             style="background: #3b1219; color: #ff8a9b; border: 1px solid #ff4d67; padding: 10px 12px; border-radius: 8px; margin-bottom: 14px; font-size: 0.9rem;">
           {{ errorMessage }}
         </div>
 
@@ -41,7 +40,7 @@
           <div class="form-group">
             <div class="label-row">
               <label>Contraseña</label>
-              <a routerLink="/forgot-password" class="forgot-link">¿Olvidaste tu contraseña?</a>
+              <a href="#" (click)="openForgotModal($event)" class="forgot-link">¿Olvidaste tu contraseña?</a>
             </div>
             <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••" required />
           </div>
@@ -61,4 +60,34 @@
     </div>
   </div>
 </div>
+
+<div class="modal-overlay" *ngIf="isForgotModalOpen">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Recuperar Contraseña</h3>
+      <button class="modal-close" (click)="closeForgotModal()">&times;</button>
+    </div>
+    <p class="modal-subtitle">Ingresa el correo asociado a tu cuenta para enviarte las instrucciones.</p>
+
+    <div class="modal-alert" [ngClass]="{'error': isForgotError, 'success': !isForgotError}" *ngIf="forgotMessage">
+      {{ forgotMessage }}
+    </div>
+
+    <div *ngIf="!isSendingEmail">
+      <div class="form-group">
+        <label>Correo Electrónico</label>
+        <input type="email" [(ngModel)]="forgotEmail" placeholder="artista&#64;rendervault.io" />
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" (click)="closeForgotModal()">Cancelar</button>
+        <button type="button" class="btn-primary" (click)="sendResetEmail()">Enviar Enlace</button>
+      </div>
+    </div>
+
+    <div class="modal-loading" *ngIf="isSendingEmail">
+      <p>Enviando correo de recuperación...</p>
+    </div>
+  </div>
+</div>
+
 <app-footer></app-footer>

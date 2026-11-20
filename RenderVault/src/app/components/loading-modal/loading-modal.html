@@ -1,0 +1,7 @@
+<div class="loading-backdrop" *ngIf="loadingService.isLoading()" role="dialog" aria-modal="true" aria-live="assertive">
+  <div class="loading-card">
+    <div class="spinner-ring"></div>
+    <p class="loading-text">{{ loadingService.message() }}</p>
+    <span class="loading-subtext">Por favor espera un momento...</span>
+  </div>
+</div>

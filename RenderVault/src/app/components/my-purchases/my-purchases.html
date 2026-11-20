@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+
+<main class="purchases-container">
+  <header class="page-header">
+    <h1>Mis Compras</h1>
+    <p>Accede y descarga todos los modelos 3D que has adquirido en RenderVault.</p>
+  </header>
+
+  <div *ngIf="generalPurchases.length > 0 || commissionPurchases.length > 0; else emptyPurchases" class="purchases-content">
+
+    <!-- En esta seccion se mostraran los modelos que se encuentren dentro del apartado "general", ergo todos los modelos que no sean comisiones -->
+    <section class="purchase-section" *ngIf="generalPurchases.length > 0">
+      <div class="section-header">
+        <h2>Modelos Generales</h2>
+        <span class="item-count">{{ generalPurchases.length }} {{ generalPurchases.length === 1 ? 'modelo' : 'modelos' }}</span>
+      </div>
+
+      <div class="purchases-grid">
+        <article class="purchase-card" *ngFor="let item of generalPurchases">
+          <div class="model-preview">
+            <model-viewer [src]="item.modelSrc"
+                          interaction-prompt="none"
+                          disable-zoom
+                          disable-tap
+                          disable-pan
+                          exposure="1"
+                          shadow-intensity="1">
+            </model-viewer>
+            <span class="format-badge">{{ item.fileType }}</span>
+          </div>
+
+          <div class="purchase-details">
+            <div class="order-meta">
+              <span class="order-id">Orden #{{ item.orderId }}</span>
+              <span class="order-date">{{ item.purchaseDate }}</span>
+            </div>
+
+            <h3>{{ item.title }}</h3>
+
+            <div class="purchase-footer">
+              <span class="purchase-price">${{ item.price.toFixed(2) }} MXN</span>
+              <button class="btn-download" (click)="downloadModel(item)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Descargar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seccion para la parte de las comisiones, se permanecera oculta en lo que se desarrolla -->
+    <section class="purchase-section" *ngIf="commissionPurchases.length > 0">
+      <div class="section-header">
+        <h2>Comisiones Personalizadas</h2>
+        <span class="item-count">{{ commissionPurchases.length }} {{ commissionPurchases.length === 1 ? 'comisión' : 'comisiones' }}</span>
+      </div>
+
+      <div class="purchases-grid">
+        <article class="purchase-card" *ngFor="let item of commissionPurchases">
+          <div class="model-preview">
+            <model-viewer [src]="item.modelSrc"
+                          interaction-prompt="none"
+                          disable-zoom
+                          disable-tap
+                          disable-pan
+                          exposure="1"
+                          shadow-intensity="1">
+            </model-viewer>
+            <span class="format-badge">{{ item.fileType }}</span>
+          </div>
+
+          <div class="purchase-details">
+            <div class="order-meta">
+              <span class="order-id">Orden #{{ item.orderId }}</span>
+              <span class="order-date">{{ item.purchaseDate }}</span>
+            </div>
+
+            <h3>{{ item.title }}</h3>
+
+            <div class="purchase-footer">
+              <span class="purchase-price">${{ item.price.toFixed(2) }} MXN</span>
+              <button class="btn-download" (click)="downloadModel(item)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Descargar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <ng-template #emptyPurchases>
+    <div class="empty-state">
+      <p>Aún no has realizado ninguna compra en RenderVault.</p>
+      <a routerLink="/productos" class="btn-explore">Explorar Catálogo 3D</a>
+    </div>
+  </ng-template>
+</main>
+
+<app-footer></app-footer>
