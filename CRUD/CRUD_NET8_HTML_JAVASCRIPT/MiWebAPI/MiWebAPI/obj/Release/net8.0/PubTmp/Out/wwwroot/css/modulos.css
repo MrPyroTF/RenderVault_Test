@@ -1,0 +1,110 @@
+﻿* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080a0f;
+    color: #e2e8f0;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-logo {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    border: 1.5px solid #d4af37;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
+.card {
+    border-radius: 16px;
+    background-color: #121622;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: #f1f5f9;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.table th {
+    white-space: nowrap;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table td {
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+    .acciones .btn + .btn {
+        margin-left: 0.4rem;
+    }
+
+.form-control:focus, .form-select:focus {
+    background-color: #0d111a;
+    border-color: #3b82f6;
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+/* Contenedor de notificaciones flotantes tipo Toast */
+#toastContainer {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1080;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-toast {
+    background: #161b26;
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+    animation: fadeInSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .custom-toast.success {
+        border-left: 4px solid #10b981;
+    }
+
+    .custom-toast.danger {
+        border-left: 4px solid #ef4444;
+    }
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

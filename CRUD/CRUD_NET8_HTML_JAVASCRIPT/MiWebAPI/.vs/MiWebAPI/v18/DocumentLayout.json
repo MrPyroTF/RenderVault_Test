@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\data\\comisiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\data\\comisiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\usuarios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\usuarios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\reviews.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\reviews.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\productos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\productos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\enlaces-descarga.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\enlaces-descarga.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\compras.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\compras.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\comisiones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\comisiones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\administradores.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\administradores.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\js\\enlaces-descarga.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\js\\enlaces-descarga.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\js\\compras.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\js\\compras.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\js\\comisiones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\js\\comisiones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\controllers\\enlacedescargacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\controllers\\enlacedescargacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\controllers\\comisioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\controllers\\comisioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\data\\enlacedescargadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\data\\enlacedescargadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\data\\compradata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\data\\compradata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\models\\enlacedescarga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\models\\enlacedescarga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|c:\\users\\adria\\downloads\\render_vault\\render_vault\\practicafinal\\crud_net8_html_javascript_v_final\\crud_net8_html_javascript\\miwebapi\\miwebapi\\models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3A25F5-1168-4F9F-B7EB-778DAB0AF1CD}|MiWebAPI\\MiWebAPI.csproj|solutionrelative:miwebapi\\models\\comision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "usuarios.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\usuarios.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\usuarios.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\usuarios.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\usuarios.html",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAiwKUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T05:34:03.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "reviews.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\reviews.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\reviews.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\reviews.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\reviews.html",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAiwJgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T05:33:54.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "productos.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\productos.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\productos.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\productos.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\productos.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAiwKwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T05:33:46.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "administradores.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\administradores.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\administradores.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\administradores.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\administradores.html",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAkwJsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T04:54:32.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "enlaces-descarga.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\enlaces-descarga.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\enlaces-descarga.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\enlaces-descarga.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\enlaces-descarga.html",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAiwJgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T04:44:37.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "compras.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\compras.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\compras.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\compras.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\compras.html",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwJQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T04:44:18.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "comisiones.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\comisiones.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\comisiones.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\comisiones.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\comisiones.html",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAK4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T04:44:02.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ComisionData.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\ComisionData.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Data\\ComisionData.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\ComisionData.cs",
+              "RelativeToolTip": "MiWebAPI\\Data\\ComisionData.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAkwM4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:28:39.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "enlaces-descarga.js",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\enlaces-descarga.js",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\js\\enlaces-descarga.js",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\enlaces-descarga.js",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\js\\enlaces-descarga.js",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAkwMUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-27T04:47:11.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "compras.js",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\compras.js",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\js\\compras.js",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\compras.js",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\js\\compras.js",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAYwMcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-27T04:46:52.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "comisiones.js",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\comisiones.js",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\js\\comisiones.js",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\js\\comisiones.js",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\js\\comisiones.js",
+              "ViewState": "AgIAALUAAAAAAAAAAAAkwNAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-27T04:46:42.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "MiWebAPI\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\wwwroot\\index.html",
+              "RelativeToolTip": "MiWebAPI\\wwwroot\\index.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAiwKwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-27T04:42:43.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnlaceDescargaController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\EnlaceDescargaController.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Controllers\\EnlaceDescargaController.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\EnlaceDescargaController.cs",
+              "RelativeToolTip": "MiWebAPI\\Controllers\\EnlaceDescargaController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA3wDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:32:38.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CompraController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\CompraController.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Controllers\\CompraController.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\CompraController.cs",
+              "RelativeToolTip": "MiWebAPI\\Controllers\\CompraController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA3wDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:32:17.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ComisionController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\ComisionController.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Controllers\\ComisionController.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Controllers\\ComisionController.cs",
+              "RelativeToolTip": "MiWebAPI\\Controllers\\ComisionController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA3wDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:31:56.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Program.cs",
+              "RelativeToolTip": "MiWebAPI\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:29:42.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EnlaceDescargaData.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\EnlaceDescargaData.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Data\\EnlaceDescargaData.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\EnlaceDescargaData.cs",
+              "RelativeToolTip": "MiWebAPI\\Data\\EnlaceDescargaData.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAkwLwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:29:26.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CompraData.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\CompraData.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Data\\CompraData.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Data\\CompraData.cs",
+              "RelativeToolTip": "MiWebAPI\\Data\\CompraData.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAkwLoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:29:05.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EnlaceDescarga.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\EnlaceDescarga.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Models\\EnlaceDescarga.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\EnlaceDescarga.cs",
+              "RelativeToolTip": "MiWebAPI\\Models\\EnlaceDescarga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:27:45.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\Compra.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Models\\Compra.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\Compra.cs",
+              "RelativeToolTip": "MiWebAPI\\Models\\Compra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:27:29.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Comision.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\Comision.cs",
+              "RelativeDocumentMoniker": "MiWebAPI\\Models\\Comision.cs",
+              "ToolTip": "C:\\Users\\adria\\Downloads\\Render_Vault\\Render_Vault\\PracticaFinal\\CRUD_NET8_HTML_JAVASCRIPT_V_FINAL\\CRUD_NET8_HTML_JAVASCRIPT\\MiWebAPI\\MiWebAPI\\Models\\Comision.cs",
+              "RelativeToolTip": "MiWebAPI\\Models\\Comision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T04:27:10.291Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
